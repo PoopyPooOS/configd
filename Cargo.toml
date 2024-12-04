@@ -1,0 +1,16 @@
+[package]
+name = "configd"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+opt-level = "z"
+lto = true
+strip = true
+
+[dependencies]
+serde = { version = "1.0.215", features = ["derive"] }
+linux-ipc = "0.2.1"
+
+tl = { path = "../tl" }
+logger = { path = "../logger" }
